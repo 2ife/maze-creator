@@ -1,0 +1,139 @@
+@import "./reset.css";
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mazeSettingModal {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  width: 40%;
+  height: 60%;
+  border: 0.1vh black solid;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.mazeSettingModal::backdrop {
+  background-color: gray;
+}
+.mazeSettingModal > form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.mazeSettingModal_rowSetter,
+.mazeSettingModal_cellSetter,
+.mazeSettingModal_startCoordSetter,
+.mazeSettingModal_destinationCoordSetter {
+  width: 80%;
+  height: 15%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mazeSettingModal_setterName {
+  width: 30%;
+  font-size: 1vw;
+}
+.mazeSettingModal_settingValue {
+  width: 20%;
+  margin-right: 5%;
+  text-align: center;
+}
+.mazeSettingModal button {
+  width: 25%;
+  height: 15%;
+  font-size: 1.2vw;
+  font-weight: 900;
+  border: 0.5vh black solid;
+  border-radius: 5%;
+}
+.mazeSettingModal button:active {
+  padding-bottom: 1vh;
+}
+.modeShower {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 9vh;
+  position: fixed;
+  border: 0.1vh black solid;
+  font-size: 3vh;
+  font-weight: 900;
+  background-color: white;
+}
+.mazeContainer {
+  margin-top: 10vh;
+}
+.mazeRoom {
+  width: 5vh;
+  height: 5vh;
+  border: 0.2vh black solid;
+}
+#startPoint{
+  background-color: beige;
+}
+#endPoint{
+  background-color: rgb(255, 200, 0);
+}
+.leftAble {
+  border-left: 0;
+}
+.rightAble {
+  border-right: 0;
+}
+.topAble {
+  border-top: 0;
+}
+.bottomAble {
+  border-bottom: 0;
+}
+.mazeDownloader {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  width: 30%;
+  height: 30%;
+  border: 0.1vh black solid;
+  /* display: flex; */
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mazeDownloader_nameContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nameContainer_label {
+  width: 30%;
+  text-align: center;
+}
+.nameContainer_fileName {
+  width: 50%;
+  margin: 0 5%;
+  text-align: center;
+}
+.mazeDownloader_downloadBtn,
+.mazeDownloader_cancelBtn {
+  width: 30%;
+  height: 20%;
+}
+.mazeDownloader_downloadBtn:active,
+.mazeDownloader_cancelBtn:active {
+  padding-bottom: 1%;
+}

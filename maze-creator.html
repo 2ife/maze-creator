@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Maze</title>
+    <link rel="stylesheet" href="./stylesheets/maze-creator.css" />
+  </head>
+  <body>
+    <dialog class="mazeSettingModal">
+      <form>
+        <div class="mazeSettingModal_rowSetter">
+          <span class="mazeSettingModal_setterName">Rows</span>
+          <input
+            type="text"
+            class="mazeSettingModal_settingValue"
+            placeholder="10"
+          />
+        </div>
+        <div class="mazeSettingModal_cellSetter">
+          <span class="mazeSettingModal_setterName">Cells</span>
+          <input
+            type="text"
+            class="mazeSettingModal_settingValue"
+            placeholder="10"
+          />
+        </div>
+        <div class="mazeSettingModal_startCoordSetter">
+          <span class="mazeSettingModal_setterName">startCoord</span>
+          <input
+            type="text"
+            class="mazeSettingModal_settingValue"
+            placeholder="y coord"
+          />
+          <input
+            type="text"
+            class="mazeSettingModal_settingValue"
+            placeholder="x coord"
+          />
+        </div>
+        <div class="mazeSettingModal_destinationCoordSetter">
+          <span class="mazeSettingModal_setterName">destinationCoord</span>
+          <input
+            type="text"
+            class="mazeSettingModal_settingValue"
+            placeholder="y coord"
+          />
+          <input
+            type="text"
+            class="mazeSettingModal_settingValue"
+            placeholder="x coord"
+          />
+        </div>
+        <button type="submit">CREATE</button>
+      </form>
+    </dialog>
+    <dialog class="mazeDownloader">
+        <div class="mazeDownloader_nameContainer">
+          <span class="nameContainer_label">파일 이름</span>
+          <input type="text" class="nameContainer_fileName" placeholder="ex: 1-1" />
+        </div>
+        <button type="submit" class="mazeDownloader_downloadBtn">Save</button>
+        <button type="submit" class="mazeDownloader_cancelBtn">Cancel</button>
+    </dialog>
+    <div class="modeShower">normal</div>
+    <table class="mazeContainer"></table>
+    <script src="./scripts/maze-creator.js"></script>
+  </body>
+</html>
