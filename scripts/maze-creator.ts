@@ -45,15 +45,19 @@ let maze: Maze,
 const downloadMazeDataFile = () => {
   const fileName = downloadFileNameContainer.value,
     a = document.createElement("a"),
-    htmlFile = new File([mazeContainer.innerHTML], `${fileName}.html`, {
-      type: "text/html",
-    }),
-    jsonFile = new File([JSON.stringify(mazeData)], `${fileName}.json`, {
-      type: "application/json",
-    });
-  a.href = URL.createObjectURL(htmlFile);
-  a.download = `${fileName}.html`;
-  a.click();
+    jsonFile = new File(
+      [
+        JSON.stringify({
+          mazeData,
+          startCoord: maze.startCoord,
+          destinationCoord: maze.destinationCoord,
+        }),
+      ],
+      `${fileName}.json`,
+      {
+        type: "application/json",
+      }
+    );
   a.href = URL.createObjectURL(jsonFile);
   a.download = `${fileName}.json`;
   a.click();
